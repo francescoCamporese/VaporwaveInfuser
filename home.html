@@ -1,0 +1,32 @@
+<audio controls style="display:none" id="music" preload="none">
+	<source src="http://radio.plaza.one/mp3">
+</audio>
+
+<video autoplay muted loop id="bgVid">
+	<source src="static/bg/1.mp4" type="video/mp4" id="bgSrc">
+</video>
+
+<div class="title" id="titleDiv">
+	<img src="static/img/streamsterTitle.png" id="titleImg">
+</div>
+
+<div class="player" id="playerDiv">	
+	<button class="btn btn-primary" id="playPauseBtn" onclick="playPauseFun();"><img src="static/img/baseline_play_arrow_white_24dp.png">Play</button>
+</div>
+
+<div class="cast" id="castDiv">	
+	<button class="btn btn-primary" id="castBtn" onclick="onCastBtnClick();"><img src="static/img/baseline_refresh_white_24dp.png"></button>
+</div>
+
+<div class="btn-group btn-group-toggle" data-toggle="buttons" id ="bgDiv">
+	<!---potrai togliere questi 3 quando automatizzerai la cosa usando la funzione contenuta in bg.js-->
+	<label class="btn btn-primary active" id="bglbl1" onclick="selectBg(1);">
+		<input type="radio" name="bg" id="bg1" autocomplete="off" checked>1
+    </label>
+	<label class="btn btn-primary" id="bglbl2" onclick="selectBg(2);">
+		<input type="radio" name="bg" id="bg2" autocomplete="off">2
+    </label>
+	<label class="btn btn-primary" id="bglbl3" onclick="selectBg(3);">
+		<input type="radio" name="bg" id="bg3" autocomplete="off">3
+    </label>
+</div>

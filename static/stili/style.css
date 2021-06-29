@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+}
+
+#bgVid {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+}
+
+#titleDiv {
+  text-align: center;
+  top: 0%;
+}
+
+#playerDiv {
+  align: center;
+}
+
+#playPauseBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#castDiv {
+  align: right;
+}
+
+#castBtn {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+#bgDiv {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+}
