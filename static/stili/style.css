@@ -2,6 +2,10 @@ body {
   background-color: black;
 }
 
+#music {
+  display: none;
+}
+
 #bgVid {
   object-fit: cover;
   width: 100%;
@@ -14,21 +18,19 @@ body {
 
 #titleDiv {
   text-align: center;
+  left: 50%;
   top: 0%;
 }
 
-#playerDiv {
-  align: center;
+#titleImg {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #playPauseBtn {
   position: absolute;
   top: 50%;
   left: 50%;
-}
-
-#castDiv {
-  align: right;
 }
 
 #castBtn {
@@ -39,6 +41,16 @@ body {
 
 #bgDiv {
   position: absolute;
-  left: 50%;
+  left: 0%;
   bottom: 0%;
+  width: 50%;
+	overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
 }
