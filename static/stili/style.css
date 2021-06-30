@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'VCR-OSD-Mono';
+    src:url('static/fonts/VCR-OSD-Mono.ttf.woff') format('woff'),
+        url('static/fonts/VCR-OSD-Mono.ttf.svg#VCR-OSD-Mono') format('svg'),
+        url('static/fonts/VCR-OSD-Mono.ttf.eot'),
+        url('static/fonts/VCR-OSD-Mono.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   background-color: black;
+  font-family: 'VCR-OSD-Mono';
 }
 
 #music {
@@ -27,10 +38,17 @@ body {
   max-height: 100%;
 }
 
+#aboutBtn {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
 #playPauseBtn {
   position: absolute;
   top: 50%;
   left: 50%;
+  background-color: rgba(0.5, 0.5, 0.5, 0.5);
 }
 
 #castBtn {

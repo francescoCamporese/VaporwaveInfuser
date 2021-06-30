@@ -10,7 +10,22 @@
 	<img src="static/img/streamsterTitle.png" id="titleImg">
 </div>
 
-<button class="btn bg-transparent btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();"><img src="static/img/baseline_play_arrow_white_24dp.png">Play</button>
+<button class="btn bg-transparent text-white" id="aboutBtn" data-toggle="modal" data-target="#aboutModal">About</button>
+
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalCenterTitle">About</h5>
+			</div>
+			<div class="modal-body">
+				About app
+			</div>
+		</div>
+	</div>
+</div>
+
+<button class="btn btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();"><img src="static/img/baseline_play_arrow_white_24dp.png">Play</button>
 
 <button class="btn bg-transparent btn-lg text-white" id="castBtn" onclick="onCastBtnClick();"><img src="static/img/baseline_refresh_white_24dp.png"></button>
 
