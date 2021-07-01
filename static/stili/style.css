@@ -59,6 +59,10 @@ body {
   position: absolute;
   bottom: 0%;
   right: 0%;
+  
+  /*TEST*/
+  height: 60px;
+  width:  60px;
 }
 
 #bgDiv {
