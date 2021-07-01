@@ -33,14 +33,19 @@
 <button class="btn bg-transparent btn-lg text-white" id="castBtn" onclick="onCastBtnClick();"><img src="static/img/baseline_refresh_white_24dp.png"></button>
 
 <div class="btn-group btn-group-toggle" data-toggle="buttons" id ="bgDiv">
-	<!---potrai togliere questi 3 quando automatizzerai la cosa usando la funzione contenuta in bg.js-->
-	<label class="btn bg-transparent btn-lg text-white active" id="bglbl1" onclick="selectBg(1);">
-		<input type="radio" name="bg" id="bg1" autocomplete="off" checked><img src="static/img/98pc24dp.png"><br>1
-    </label>
-	<label class="btn bg-transparent btn-lg text-white" id="bglbl2" onclick="selectBg(2);">
-		<input type="radio" name="bg" id="bg2" autocomplete="off"><img src="static/img/98pc24dp.png"><br>2
-    </label>
-	<label class="btn bg-transparent btn-lg text-white" id="bglbl3" onclick="selectBg(3);">
-		<input type="radio" name="bg" id="bg3" autocomplete="off"><img src="static/img/98pc24dp.png"><br>3
-    </label>
+	<?php
+		$newFiles = scandir("static/bg/", 0);
+		foreach($newFiles as $file)
+		{
+			if ($file !== '.' && $file !== '..')
+			{
+				$name = strstr($file, '.', TRUE);
+	?>
+				<label class="btn bg-transparent btn-lg text-white <?php if (strcmp($name, "1") == 0) echo "active";?>" id="bglbl<?php echo $name;?>" onclick="selectBg(<?php echo $name;?>);">
+					<input type="radio" name="bg" id="bg<?php echo $name;?>" autocomplete="off" <?php if (strcmp($name, "1") == 0) echo "checked";?>><img src="static/img/98pc24dp.png"><br><?php echo $name;?>
+				</label>
+	<?php
+			}
+		}
+	?>
 </div>
