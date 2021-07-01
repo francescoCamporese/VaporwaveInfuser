@@ -72,10 +72,9 @@ body {
   bottom: 0%;
   right: 0%;
   
-  /*TEST
+  /*TEST*/
   height: 60px;
   width:  60px;
-  */
 }
 
 #bgDiv {

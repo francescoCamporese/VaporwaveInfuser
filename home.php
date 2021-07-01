@@ -28,9 +28,8 @@
 
 <button class="btn btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();"><img src="static/img/baseline_play_arrow_white_24dp.png">Play</button>
 
-<button class="btn bg-transparent btn-lg text-white" id="castBtn" onclick="onCastBtnClick();" disabled><img src="static/img/baseline_refresh_white_24dp.png"></button>
-
-<!---<button class="btn bg-transparent btn-lg text-white" id="castBtn" is="google-cast-button"></button>--><!---TEST-->
+<!---<button class="btn bg-transparent btn-lg text-white" id="castBtn" onclick="onCastBtnClick();" disabled><img src="static/img/baseline_refresh_white_24dp.png"></button>-->
+<button class="btn bg-transparent btn-lg text-white" id="castBtn" is="google-cast-button"></button><!---TEST-->
 
 <div class="btn-group btn-group-toggle" data-toggle="buttons" id ="bgDiv">
 	<?php

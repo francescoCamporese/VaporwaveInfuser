@@ -1,4 +1,4 @@
-var initializeCastApi = function() {
+/*var initializeCastApi = function() {
   console.log('initializeCastApi');
 
   var sessionRequest = new chrome.cast.SessionRequest(
@@ -49,14 +49,11 @@ function onMediaLoadSuccess(e) {
 
 function onCastBtnClick() {
   chrome.cast.requestSession(onSessionRequestSuccess, onError);
-}
-
-
-
+}*/
 
 
 //TEST
-/*window.__onGCastApiAvailable = function(isAvailable){
+window.__onGCastApiAvailable = function(isAvailable){
   if(! isAvailable) {
     return false;
   }
@@ -84,4 +81,3 @@ function onCastBtnClick() {
       });
   });
 };
-*/
