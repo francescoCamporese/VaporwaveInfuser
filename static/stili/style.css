@@ -27,21 +27,28 @@ body {
   z-index: -1;
 }
 
-#titleDiv {
-  text-align: center;
-  left: 50%;
-  top: 0%;
-}
-
 #titleImg {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  margin-top: auto; 
+  margin-bottom: auto;
+  margin-left: auto; 
+  margin-right: auto;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 25%;
 }
 
 #aboutBtn {
   position: absolute;
   bottom: 0%;
-  left: 50%;
+  left: 0%;
+  right: 0%;
+  margin-top: auto; 
+  margin-bottom: auto;
+  margin-left: auto; 
+  margin-right: auto;
 }
 
 .modal-content {
@@ -51,7 +58,12 @@ body {
 #playPauseBtn {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0%; 
+  right: 0%;
+  margin-top: auto; 
+  margin-bottom: auto;
+  margin-left: auto; 
+  margin-right: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
 

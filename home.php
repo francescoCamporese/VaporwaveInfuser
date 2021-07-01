@@ -6,9 +6,7 @@
 	<source src="static/bg/1.mp4" type="video/mp4" id="bgSrc">
 </video>
 
-<div class="title" id="titleDiv">
-	<img src="static/img/streamsterTitle.png" id="titleImg">
-</div>
+<img src="static/img/streamsterTitle.png" id="titleImg">
 
 <button class="btn bg-transparent text-white" id="aboutBtn" data-toggle="modal" data-target="#aboutModal">About</button>
 
