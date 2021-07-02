@@ -21,6 +21,8 @@
 				Developed by: <a href="https://francescocamporese.weebly.com/">Francesco Camporese</a>
 				<br>
 				<a href="https://radio.plaza.one/mp3">Source</a> (mp3 / 128kbps)
+				<br>
+				If you don't see the cast button, use HTTPS
 			</div>
 		</div>
 	</div>
