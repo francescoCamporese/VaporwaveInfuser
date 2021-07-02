@@ -1,5 +1,5 @@
 <audio id="music" preload="none">
-	<source src="http://radio.plaza.one/mp3">
+	<source src="https://radio.plaza.one/mp3">
 </audio>
 
 <video autoplay muted loop id="bgVid">
@@ -20,7 +20,7 @@
 				<h2>Vaporwave Infuser</h2>
 				Developed by: <a href="https://francescocamporese.weebly.com/">Francesco Camporese</a>
 				<br>
-				<a href="http://radio.plaza.one/mp3">Source</a> (mp3 / 128kbps)
+				<a href="https://radio.plaza.one/mp3">Source</a> (mp3 / 128kbps)
 			</div>
 		</div>
 	</div>

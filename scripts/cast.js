@@ -36,7 +36,7 @@ function onSessionRequestSuccess(session) {
   console.log('onSessionRequestSuccess', session);
 
   var mediaInfo = new chrome.cast.media.MediaInfo(
-    "http://radio.plaza.one/mp3",
+    "https://radio.plaza.one/mp3",
     "audio/mpeg");
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   session.loadMedia(request, onMediaLoadSuccess, onError);
