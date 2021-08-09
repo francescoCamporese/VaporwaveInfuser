@@ -48,8 +48,8 @@ body {
 #aboutBtn {
   position: absolute;
   bottom: 0%;
-  left: 0%;
-  right: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
   margin-top: auto; 
   margin-bottom: auto;
   margin-left: auto; 
@@ -63,8 +63,8 @@ body {
 #playPauseBtn {
   position: absolute;
   top: 50%;
-  left: 0%; 
-  right: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin-top: auto; 
   margin-bottom: auto;
   margin-left: auto; 
