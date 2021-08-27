@@ -3,7 +3,7 @@
 </audio>
 
 <video autoplay muted loop id="bgVid">
-	<source src="static/bg/1.mp4" type="video/mp4" id="bgSrc">
+	<source src="static/bg/1.webm" type="video/webm" id="bgSrc">
 </video>
 
 <img src="static/img/streamsterTitle.png" id="titleImg">
