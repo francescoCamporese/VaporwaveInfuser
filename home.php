@@ -20,7 +20,9 @@
 				<h2>Vaporwave Infuser</h2>
 				Developed by: <a href="https://francescocamporese.weebly.com/">Francesco Camporese</a>
 				<br>
-				<a href="https://radio.plaza.one/mp3">Source</a> (mp3 / 128kbps)
+				<a href="https://radio.plaza.one/mp3">Audio source</a> (mp3 / 128kbps)
+				<br>
+				<a href="https://mylivewallpapers.com">Wallpapers source</a>
 			</div>
 		</div>
 	</div>
