@@ -28,11 +28,15 @@
 	</div>
 </div>
 
-<button class="btn btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();"><img src="static/img/baseline_play_arrow_white_24dp.png">Play</button>
+<div id="playerDiv">
+	<button class="btn btn-lg text-white" id="volumeDownBtn" onclick="setVolume(-10);">-</button>
+	<button class="btn btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();"><img src="static/img/baseline_play_arrow_white_24dp.png">Play</button>
+	<button class="btn btn-lg text-white" id="volumeUpBtn" onclick="setVolume(10);" disabled>+</button>
+</div>
 
 <button class="btn bg-transparent btn-lg text-white" id="castBtn" is="google-cast-button"></button>
 
-<div class="btn-group btn-group-toggle" data-toggle="buttons" id ="bgDiv">
+<div class="btn-group btn-group-toggle" data-toggle="buttons" id="bgDiv">
 	<?php
 		$newFiles = scandir("static/bg/", 0);
 		foreach($newFiles as $file)
