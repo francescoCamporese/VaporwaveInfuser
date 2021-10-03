@@ -7,3 +7,23 @@ function selectBg(id) {
         vid.play();
     }
 }
+
+function hideUi() {
+    var playerDiv = document.getElementById("playerDiv");
+    var bgDiv = document.getElementById("bgDiv");
+    var aboutBtn = document.getElementById("aboutBtn");
+    var castBtn = document.getElementById("castBtn");
+    
+    if (playerDiv.hidden) {
+        playerDiv.hidden = false;
+        bgDiv.hidden = false;
+        aboutBtn.hidden = false;
+        castBtn.hidden = false;
+    }
+    else {
+        playerDiv.hidden = true;
+        bgDiv.hidden = true;
+        aboutBtn.hidden = true;
+        castBtn.hidden = true;
+    }
+}

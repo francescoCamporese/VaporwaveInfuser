@@ -6,7 +6,7 @@
 	<source src="static/bg/1.webm" type="video/webm" id="bgSrc">
 </video>
 
-<img src="static/img/streamsterTitle.png" id="titleImg">
+<img src="static/img/streamsterTitle.png" id="titleImg" onclick="hideUi();">
 
 <button class="btn bg-transparent text-white" id="aboutBtn" data-toggle="modal" data-target="#aboutModal">About</button>
 
