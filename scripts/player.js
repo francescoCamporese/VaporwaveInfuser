@@ -18,7 +18,6 @@ function setVolume(val) {
     var up = document.getElementById("volumeUpBtn");
         
     aud.volume = ((aud.volume * 100) + val) / 100;
-    console.log(aud.volume);
     
     switch (aud.volume) {
         case 0:

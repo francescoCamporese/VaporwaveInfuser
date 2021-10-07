@@ -1,6 +1,15 @@
 function selectBg(id) {
     var src = document.getElementById("bgSrc");
-    if (src.getAttribute("src").localeCompare("static/bg/" + id + ".webm")) {    
+    if (src.getAttribute("src").localeCompare("static/bg/" + id + ".webm")) {
+        /*cambio iconcina ma prima rimetto normale quella che era selezionata prima (in home devo settare la prima come cliccata)*/
+        var prevBgSrc = document.getElementById("bgSrc").src;
+        var prevId = prevBgSrc.substring(prevBgSrc.lastIndexOf("/") + 1, prevBgSrc.lastIndexOf("."));
+        var prevIco = document.getElementById("icobg" + prevId);
+        prevIco.src = "static/img/98pc24dp.png";
+        
+        var clicked = document.getElementById("icobg" + id);
+        clicked.src = "static/img/gbasp24dp.png";
+        
         var vid = document.getElementById("bgVid");
         src.src = "static/bg/" + id + ".webm";
         vid.load();

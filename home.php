@@ -46,7 +46,7 @@
 				$name = strstr($file, '.', TRUE);
 	?>
 				<label class="btn bg-transparent btn-lg text-white <?php if (strcmp($name, "1") == 0) echo "active";?>" id="bglbl<?php echo $name;?>" onclick="selectBg(<?php echo $name;?>);">
-					<input type="radio" name="bg" id="bg<?php echo $name;?>" autocomplete="off" <?php if (strcmp($name, "1") == 0) echo "checked";?>><img src="static/img/98pc24dp.png" width="32" height="32"><br><?php echo $name;?>
+					<input type="radio" name="bg" id="bg<?php echo $name;?>" autocomplete="off" <?php if (strcmp($name, "1") == 0) echo "checked";?>><img src="static/img/<?php if (strcmp($name, "1") == 0) echo "gbasp24dp"; else echo "98pc24dp";?>.png" width="32" height="32" id="icobg<?php echo $name;?>"><br><?php echo $name;?>
 				</label>
 	<?php
 			}
