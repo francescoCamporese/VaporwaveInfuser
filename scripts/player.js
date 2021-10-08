@@ -1,15 +1,10 @@
 function playPauseFun() {
     var aud = document.getElementById("music");
-    var btn = document.getElementById("playPauseBtn");
     
-    if (aud.paused) {
+    if (aud.paused)
         aud.play();
-        btn.innerHTML = "<img src=\"static/img/baseline_pause_white_24dp.png\">Pause";
-    }
-    else {
+    else
         aud.pause();
-        btn.innerHTML = "<img src=\"static/img/baseline_play_arrow_white_24dp.png\">Play";
-    }
 }
 
 function setVolume(val) {
@@ -31,4 +26,12 @@ function setVolume(val) {
             up.disabled = false;
             break;
     }
+}
+
+function whenPaused() {
+    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_play_arrow_white_24dp.png\">Play";
+}
+
+function whenPlayed() {
+    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_pause_white_24dp.png\">Pause";
 }

@@ -1,4 +1,4 @@
-<audio id="music" preload="none">
+<audio id="music" preload="none" onpause="whenPaused()" onplay="whenPlayed()">
 	<source src="https://radio.plaza.one/mp3">
 </audio>
 
