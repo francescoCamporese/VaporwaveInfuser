@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Vaporwave Infuser</title>
         <?php include "import.html";?>
