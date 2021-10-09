@@ -29,9 +29,9 @@ function setVolume(val) {
 }
 
 function whenPaused() {
-    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_play_arrow_white_24dp.png\">Play";
+    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_play_arrow_white_24dp.webp\">Play";
 }
 
 function whenPlayed() {
-    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_pause_white_24dp.png\">Pause";
+    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_pause_white_24dp.webp\">Pause";
 }

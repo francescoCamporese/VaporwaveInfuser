@@ -70,7 +70,7 @@ body {
   margin-bottom: auto;
   margin-left: auto; 
   margin-right: auto;
-  width: 220px;
+  width: fit-content;
 }
 
 #playPauseBtn {
