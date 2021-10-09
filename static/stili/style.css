@@ -11,7 +11,7 @@
         url('../fonts/VCR-OSD-Mono.ttf.eot?#iefix') format('embedded-opentype'); 
     font-weight: normal;
     font-style: normal;
-    font-display: swap
+    font-display: swap;
 }
 
 body {
@@ -70,7 +70,6 @@ body {
   margin-bottom: auto;
   margin-left: auto; 
   margin-right: auto;
-  width: fit-content; 
 }
 
 #playPauseBtn {
