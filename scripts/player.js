@@ -46,7 +46,7 @@ function setTimer() {
         timer = setTimeout(() => {
             document.getElementById("music").pause();
             resetTimer();
-        }, parseInt(putValue, 10) * 1000);
+        }, parseInt(putValue, 10) * 60000);
 }
 
 function setVolume(val) {
