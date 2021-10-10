@@ -12,6 +12,7 @@ function playPauseFun() {
 function resetTimer() {
     var setTimerBtn = document.getElementById("setTimerBtn");
     
+    clearTimeout(timer);
     setTimerBtn.setAttribute("data-minutes", "Set timer");
     setTimerBtn.innerHTML = "<img src=\"static/img/outline_timer_white_24dp.webp\" width=\"24\" height=\"24\">Set timer";
 }
