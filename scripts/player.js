@@ -1,3 +1,5 @@
+var timer;
+
 function playPauseFun() {
     var aud = document.getElementById("music");
     
@@ -5,6 +7,40 @@ function playPauseFun() {
         aud.play();
     else
         aud.pause();
+}
+
+function setTimer() {
+    var setTimerBtn = document.getElementById("setTimerBtn");
+    var val = setTimerBtn.getAttribute("data-minutes");
+    var putValue = null;
+    
+    switch (val) {
+        case "Set timer":
+            putValue = "15min";
+            break;
+        case "15min":
+            putValue = "30min";
+            break;
+        case "30min":
+            putValue = "45min";
+            break;
+        case "45min":
+            putValue = "60min";
+            break;
+        case "60min":
+            putValue = "Set timer";
+            break;
+    }
+    setTimerBtn.setAttribute("data-minutes", putValue);
+    setTimerBtn.innerHTML = "<img src=\"static/img/outline_timer_white_24dp.webp\" width=\"24\" height=\"24\">" + putValue;
+        
+    clearTimeout(timer);
+    if (putValue != "Set timer")
+        timer = setTimeout(() => {
+            document.getElementById("music").pause();
+            setTimerBtn.setAttribute("data-minutes", "Set timer");
+            setTimerBtn.innerHTML = "<img src=\"static/img/outline_timer_white_24dp.webp\" width=\"24\" height=\"24\">Set timer";
+        }, parseInt(putValue, 10) * 60000);
 }
 
 function setVolume(val) {
@@ -29,9 +65,9 @@ function setVolume(val) {
 }
 
 function whenPaused() {
-    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_play_arrow_white_24dp.webp\">Play";
+    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_play_arrow_white_24dp.webp\" width=\"24\" height=\"24\">Play";
 }
 
 function whenPlayed() {
-    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_pause_white_24dp.webp\">Pause";
+    document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_pause_white_24dp.webp\" width=\"24\" height=\"24\">Pause";
 }

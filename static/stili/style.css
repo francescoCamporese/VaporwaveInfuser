@@ -71,6 +71,7 @@ body {
   margin-left: auto; 
   margin-right: auto;
   width: fit-content;
+  text-align:center;
 }
 
 #playPauseBtn {
@@ -80,6 +81,10 @@ body {
 #volumeDownBtn, #volumeUpBtn {
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 50%;
+}
+
+#setTimerBtn {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 #castBtn {

@@ -29,10 +29,18 @@
 </div>
 
 <div id="playerDiv">
-	<button class="btn btn-lg text-white" id="volumeDownBtn" onclick="setVolume(-10);">-</button>
-	<button class="btn btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();"><img src="static/img/baseline_play_arrow_white_24dp.webp" width="24" height="24">Play</button>
-	<button class="btn btn-lg text-white" id="volumeUpBtn" onclick="setVolume(10);" disabled>+</button>
+	<div>
+		<button class="btn btn-lg text-white" id="volumeDownBtn" onclick="setVolume(-10);">-</button>
+		<button class="btn btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();"><img src="static/img/baseline_play_arrow_white_24dp.webp" width="24" height="24">Play</button>
+		<button class="btn btn-lg text-white" id="volumeUpBtn" onclick="setVolume(10);" disabled>+</button>
+	</div>
+	<br>
+	<br>
+	<div>
+		<button class="btn btn-sm text-white" id="setTimerBtn" onclick="setTimer();" data-minutes="Set timer"><img src="static/img/outline_timer_white_24dp.webp" width="24" height="24">Set timer</button>
+	</div>
 </div>
+
 
 <button class="btn bg-transparent btn-lg text-white" id="castBtn" is="google-cast-button"></button>
 
