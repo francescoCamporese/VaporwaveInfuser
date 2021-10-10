@@ -37,7 +37,7 @@
 	<br>
 	<br>
 	<div>
-		<button class="btn btn-sm text-white" id="setTimerBtn" onclick="setTimer();" data-minutes="Set timer"><img src="static/img/outline_timer_white_24dp.webp" width="24" height="24">Set timer</button>
+		<button class="btn btn-sm text-white" id="setTimerBtn" onclick="setTimer();" data-minutes="Set timer" disabled><img src="static/img/outline_timer_white_24dp.webp" width="24" height="24">Set timer</button>
 	</div>
 </div>
 

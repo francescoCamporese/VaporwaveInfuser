@@ -9,6 +9,13 @@ function playPauseFun() {
         aud.pause();
 }
 
+function resetTimer() {
+    var setTimerBtn = document.getElementById("setTimerBtn");
+    
+    setTimerBtn.setAttribute("data-minutes", "Set timer");
+    setTimerBtn.innerHTML = "<img src=\"static/img/outline_timer_white_24dp.webp\" width=\"24\" height=\"24\">Set timer";
+}
+
 function setTimer() {
     var setTimerBtn = document.getElementById("setTimerBtn");
     var val = setTimerBtn.getAttribute("data-minutes");
@@ -38,9 +45,8 @@ function setTimer() {
     if (putValue != "Set timer")
         timer = setTimeout(() => {
             document.getElementById("music").pause();
-            setTimerBtn.setAttribute("data-minutes", "Set timer");
-            setTimerBtn.innerHTML = "<img src=\"static/img/outline_timer_white_24dp.webp\" width=\"24\" height=\"24\">Set timer";
-        }, parseInt(putValue, 10) * 60000);
+            resetTimer();
+        }, parseInt(putValue, 10) * 1000);
 }
 
 function setVolume(val) {
@@ -66,8 +72,11 @@ function setVolume(val) {
 
 function whenPaused() {
     document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_play_arrow_white_24dp.webp\" width=\"24\" height=\"24\">Play";
+    resetTimer();
+    setTimerBtn.disabled = true;
 }
 
 function whenPlayed() {
     document.getElementById("playPauseBtn").innerHTML = "<img src=\"static/img/baseline_pause_white_24dp.webp\" width=\"24\" height=\"24\">Pause";
+    setTimerBtn.disabled = false;
 }
