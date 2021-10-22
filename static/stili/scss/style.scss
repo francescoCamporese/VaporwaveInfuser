@@ -1,0 +1,133 @@
+%margins {
+  margin-top: auto; 
+  margin-bottom: auto;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+%absolute-position {
+  position: absolute;
+}
+
+@mixin top-bottom-left-right ($top-val: null, $bottom-val: null, $left-val: null, $right-val: null) {
+  @if ($top-val != null) {
+    top: $top-val * 1%;
+  }
+  @if ($bottom-val != null) {
+    bottom: $bottom-val * 1%;
+  }
+  @if ($left-val != null) {
+    left: $left-val * 1%;
+  }
+  @if ($right-val != null) {
+    right: $right-val * 1%;
+  }
+}
+
+@mixin width-height ($width-val: null, $height-val: null) {
+  width: $width-val;
+  height: $height-val;
+}
+
+@mixin background-color-rgba ($r-val, $g-val, $b-val, $a-val) {
+  background-color: rgba($r-val, $g-val, $b-val, $a-val);
+}
+
+@mixin translated ($w-val, $h-val) {
+  transform: translate($w-val * 1%, $h-val * 1%);
+}
+
+.btn {
+   outline: none !important;
+   box-shadow: none !important;
+}
+
+@font-face {
+    font-family: 'VCR-OSD-Mono';
+    src:url('../../fonts/VCR-OSD-Mono.ttf.woff') format('woff'),
+        url('../../fonts/VCR-OSD-Mono.ttf.svg#VCR-OSD-Mono') format('svg'),
+        url('../../fonts/VCR-OSD-Mono.ttf.eot'),
+        url('../../fonts/VCR-OSD-Mono.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+  background-color: black;
+  font-family: 'VCR-OSD-Mono';
+}
+
+#music {
+  display: none;
+}
+
+#bgVid {
+  @include top-bottom-left-right ($top-val: 0, $left-val: 0);
+  @include width-height (100%, 100%);
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+#titleImg {
+  @extend %margins;
+  @extend %absolute-position;
+  @include top-bottom-left-right ($top-val: 0, $left-val: 0, $right-val: 0);
+  max-width: 100%;
+  max-height: 25%;
+}
+
+#aboutBtn {
+  @extend %margins;
+  @extend %absolute-position;
+  @include top-bottom-left-right ($bottom-val: 0, $left-val: 50);
+  @include translated (-50, 0);
+}
+
+.modal-content {
+   @include background-color-rgba (255, 182, 193, 1);
+}
+
+#playerDiv {
+  @extend %margins;
+  @extend %absolute-position;
+  @include top-bottom-left-right ($top-val: 50, $left-val: 50);
+  @include width-height ($width-val: fit-content);
+  @include translated (-50, -50);
+  text-align:center;
+}
+
+#playPauseBtn {
+  @include background-color-rgba (0, 0, 0, 0.5);
+}
+
+#volumeDownBtn, #volumeUpBtn {
+  @include background-color-rgba (0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+#setTimerBtn {
+  @include background-color-rgba (0, 0, 0, 0.25);
+}
+
+#castBtn {
+  @extend %absolute-position;
+  @include top-bottom-left-right ($bottom-val: 0, $right-val: 0);
+  @include width-height (60px, 60px);
+}
+
+#bgDiv {
+  @extend %absolute-position;
+  @include top-bottom-left-right ($bottom-val: 0, $left-val: 0);
+  @include width-height ($width-val: 35%);
+	overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  @include width-height ($width-val: 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
