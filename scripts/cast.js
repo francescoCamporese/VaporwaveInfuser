@@ -14,6 +14,10 @@ window.__onGCastApiAvailable = function(isAvailable){
   castContext.addEventListener(stateChanged, function(event){
     var castSession = castContext.getCurrentSession();
     var media = new chrome.cast.media.MediaInfo("https://radio.plaza.one/mp3", "audio/mp3");
+    media.metadata = new chrome.cast.media.MusicTrackMediaMetadata();
+    media.metadata.title = "Vaporwave Infuser";
+    media.metadata.artist = "Developed by Francesco Camporese";
+    media.metadata.images = [{'url': 'https://vaporwaveinfuser.altervista.org/static/img/albumCover.webp'}];
     var request = new chrome.cast.media.LoadRequest(media);
 
     castSession && castSession
