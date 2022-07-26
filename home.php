@@ -2,7 +2,7 @@
 	<source src="https://radio.plaza.one/mp3">
 </audio>
 
-<video autoplay muted loop id="bgVid">
+<video autoplay muted loop playsinline id="bgVid">
 	<source src="static/bg/1.webm" type="video/webm" id="bgSrc">
 </video>
 
