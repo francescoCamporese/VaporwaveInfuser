@@ -1,6 +1,6 @@
 function selectBg(id) {
     var src = document.getElementById("bgSrc");
-    if (src.getAttribute("src").localeCompare("static/bg/" + id + ".webm")) {
+    if (src.getAttribute("src").localeCompare("static/bg/" + id + ".mp4")) {
         var prevBgSrc = document.getElementById("bgSrc").src;
         var prevId = prevBgSrc.substring(prevBgSrc.lastIndexOf("/") + 1, prevBgSrc.lastIndexOf("."));
         var prevIco = document.getElementById("icobg" + prevId);
@@ -10,7 +10,7 @@ function selectBg(id) {
         clicked.src = "static/img/gbasp24dp.webp";
         
         var vid = document.getElementById("bgVid");
-        src.src = "static/bg/" + id + ".webm";
+        src.src = "static/bg/" + id + ".mp4";
         vid.load();
         vid.play();
     }
