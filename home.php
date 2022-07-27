@@ -2,7 +2,7 @@
 	<source src="https://radio.plaza.one/mp3">
 </audio>
 
-<video autoplay muted loop id="bgVid">
+<video disableRemotePlayback autoplay muted loop id="bgVid">
 	<source src="static/bg/1.mp4" type="video/mp4" id="bgSrc">
 </video>
 
