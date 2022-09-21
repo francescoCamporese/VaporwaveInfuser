@@ -93,7 +93,7 @@ body {
   @extend %margins;
   @extend %absolute-position;
   @include top-bottom-left-right ($top-val: 50, $left-val: 50);
-  @include width-height ($width-val: fit-content);
+  @include width-height ($width-val: 100%);
   @include translated (-50, -50);
   text-align:center;
 }
