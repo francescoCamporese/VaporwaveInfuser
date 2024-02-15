@@ -1,7 +1,7 @@
 %margins {
-  margin-top: auto; 
+  margin-top: auto;
   margin-bottom: auto;
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -9,7 +9,21 @@
   position: absolute;
 }
 
-@mixin top-bottom-left-right ($top-val: null, $bottom-val: null, $left-val: null, $right-val: null) {
+%circle {
+  border-radius: 50%;
+}
+
+h5,
+h6 {
+  color: white;
+}
+
+@mixin top-bottom-left-right(
+  $top-val: null,
+  $bottom-val: null,
+  $left-val: null,
+  $right-val: null
+) {
   @if ($top-val != null) {
     top: $top-val * 1%;
   }
@@ -24,38 +38,38 @@
   }
 }
 
-@mixin width-height ($width-val: null, $height-val: null) {
+@mixin width-height($width-val: null, $height-val: null) {
   width: $width-val;
   height: $height-val;
 }
 
-@mixin background-color-rgba ($r-val, $g-val, $b-val, $a-val) {
+@mixin background-color-rgba($r-val, $g-val, $b-val, $a-val) {
   background-color: rgba($r-val, $g-val, $b-val, $a-val);
 }
 
-@mixin translated ($w-val, $h-val) {
+@mixin translated($w-val, $h-val) {
   transform: translate($w-val * 1%, $h-val * 1%);
 }
 
 .btn {
-   outline: none !important;
-   box-shadow: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 @font-face {
-    font-family: 'VCR-OSD-Mono';
-    src:url('../../fonts/VCR-OSD-Mono.ttf.woff') format('woff'),
-        url('../../fonts/VCR-OSD-Mono.ttf.svg#VCR-OSD-Mono') format('svg'),
-        url('../../fonts/VCR-OSD-Mono.ttf.eot'),
-        url('../../fonts/VCR-OSD-Mono.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "VCR-OSD-Mono";
+  src: url("../../fonts/VCR-OSD-Mono.ttf.woff") format("woff"),
+    url("../../fonts/VCR-OSD-Mono.ttf.svg#VCR-OSD-Mono") format("svg"),
+    url("../../fonts/VCR-OSD-Mono.ttf.eot"),
+    url("../../fonts/VCR-OSD-Mono.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
   background-color: black;
-  font-family: 'VCR-OSD-Mono';
+  font-family: "VCR-OSD-Mono";
 }
 
 #music {
@@ -63,8 +77,8 @@ body {
 }
 
 #bgVid {
-  @include top-bottom-left-right ($top-val: 0, $left-val: 0);
-  @include width-height (100%, 100%);
+  @include top-bottom-left-right($top-val: 0, $left-val: 0);
+  @include width-height(100%, 100%);
   object-fit: cover;
   position: fixed;
   z-index: -1;
@@ -73,7 +87,7 @@ body {
 #titleImg {
   @extend %margins;
   @extend %absolute-position;
-  @include top-bottom-left-right ($top-val: 0, $left-val: 0, $right-val: 0);
+  @include top-bottom-left-right($top-val: 0, $left-val: 0, $right-val: 0);
   max-width: 100%;
   max-height: 25%;
 }
@@ -81,51 +95,76 @@ body {
 #aboutBtn {
   @extend %margins;
   @extend %absolute-position;
-  @include top-bottom-left-right ($bottom-val: 0, $left-val: 50);
-  @include translated (-50, 0);
+  @include top-bottom-left-right($bottom-val: 0, $left-val: 50);
+  @include translated(-50, 0);
 }
 
 .modal-content {
-   @include background-color-rgba (255, 182, 193, 1);
+  @include background-color-rgba(255, 182, 193, 1);
 }
 
 #playerDiv {
   @extend %margins;
   @extend %absolute-position;
-  @include top-bottom-left-right ($top-val: 50, $left-val: 50);
-  @include width-height ($width-val: 100%);
-  @include translated (-50, -50);
-  text-align:center;
+  @include top-bottom-left-right($top-val: 50, $left-val: 50);
+  @include width-height($width-val: 100%);
+  @include translated(-50, -50);
+  text-align: center;
 }
 
 #playPauseBtn {
-  @include background-color-rgba (0, 0, 0, 0.5);
+  @include background-color-rgba(0, 0, 0, 0);
 }
 
-#volumeDownBtn, #volumeUpBtn {
-  @include background-color-rgba (0, 0, 0, 0.25);
-  border-radius: 50%;
+#volumeDownBtn,
+#volumeUpBtn {
+  @extend %circle;
+  @include background-color-rgba(0, 0, 0, 0.25);
 }
 
 #setTimerBtn {
-  @include background-color-rgba (0, 0, 0, 0.25);
+  @include background-color-rgba(0, 0, 0, 0.25);
 }
 
 #castBtn {
   @extend %absolute-position;
-  @include top-bottom-left-right ($bottom-val: 0, $right-val: 0);
-  @include width-height (60px, 60px);
+  @include top-bottom-left-right($bottom-val: 0, $right-val: 0);
+  @include width-height(60px, 60px);
 }
 
 #bgDiv {
   @extend %absolute-position;
-  @include top-bottom-left-right ($bottom-val: 0, $left-val: 0);
-  @include width-height ($width-val: 35%);
-	overflow-x: auto;
+  @include top-bottom-left-right($bottom-val: 0, $left-val: 0);
+  @include width-height($width-val: 35%);
+  overflow-x: auto;
+}
+
+.disk {
+  @extend %circle;
+  @include width-height(128px, 128px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  animation: animate calc(60s / 33) linear infinite;
+
+  &.playing {
+    animation-play-state: running;
+  }
+
+  &.paused {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 ::-webkit-scrollbar {
-  @include width-height ($width-val: 0);
+  @include width-height($width-val: 0);
 }
 
 ::-webkit-scrollbar-thumb {

@@ -31,10 +31,14 @@
 <div id="playerDiv">
 	<div>
 		<button class="btn btn-lg text-white" id="volumeDownBtn" onclick="setVolume(-10);">-</button>
-		<button class="btn btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();"><img src="static/img/baseline_play_arrow_white_24dp.webp" alt="play/pause button" width="24" height="24">Play</button>
+		<button class="btn btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();">
+			<img id="album" class="disk paused">
+		</button>
 		<button class="btn btn-lg text-white" id="volumeUpBtn" onclick="setVolume(10);" disabled>+</button>
 	</div>
 	<br>
+	<h5 id="title"></h5>
+	<h6 id="artist"></h6>
 	<br>
 	<div>
 		<button class="btn btn-sm text-white" id="setTimerBtn" onclick="setTimer();" data-minutes="Set timer" disabled><img src="static/img/outline_timer_white_24dp.webp" alt="timer button" width="24" height="24">Set timer</button>
