@@ -26,7 +26,7 @@ window.__onGCastApiAvailable = function(isAvailable){
         console.log("Success");
       })
       .catch(function(error) {
-        console.log("Error: " + error);
+        console.error("Error: " + error);
       });
   });
 };
