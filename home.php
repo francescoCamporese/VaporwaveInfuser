@@ -6,7 +6,7 @@
 	<source src="static/bg/1.mp4" type="video/mp4" id="bgSrc">
 </video>
 
-<img src="static/img/streamsterTitle.webp" id="titleImg" alt="title image" width="491" height="141" onclick="hideUi();">
+<img src="static/img/streamsterTitle.webp" id="titleImg" title="Vaporwave Infuser (click to hide/show UI)" alt="title image" width="491" height="141" onclick="hideUi();">
 
 <button class="btn bg-transparent text-white" id="aboutBtn" data-toggle="modal" data-target="#aboutModal">About</button>
 
@@ -32,7 +32,7 @@
 	<div>
 		<button class="btn btn-lg text-white" id="volumeDownBtn" onclick="setVolume(-10);">-</button>
 		<button class="btn btn-lg text-white" id="playPauseBtn" onclick="playPauseFun();">
-			<img id="album" class="disk paused">
+			<img id="album" class="disk paused" alt="album image">
 		</button>
 		<button class="btn btn-lg text-white" id="volumeUpBtn" onclick="setVolume(10);" disabled>+</button>
 	</div>
@@ -41,7 +41,7 @@
 	<h6 id="artist"></h6>
 	<br>
 	<div>
-		<button class="btn btn-sm text-white" id="setTimerBtn" onclick="setTimer();" data-minutes="Set timer" disabled><img src="static/img/outline_timer_white_24dp.webp" alt="timer button" width="24" height="24">Set timer</button>
+		<button class="btn btn-sm text-white" id="setTimerBtn" onclick="setTimer();" data-minutes="Set timer" disabled><img src="static/img/outline_timer_white_24dp.webp" title="Timer" alt="timer image" width="24" height="24">Set timer</button>
 	</div>
 </div>
 
@@ -58,7 +58,7 @@
 				$name = strstr($file, '.', TRUE);
 	?>
 				<label class="btn bg-transparent btn-lg text-white <?php if (strcmp($name, "1") == 0) echo "active";?>" id="bglbl<?php echo $name;?>" onclick="selectBg(<?php echo $name;?>);">
-					<input type="radio" name="bg" id="bg<?php echo $name;?>" autocomplete="off" <?php if (strcmp($name, "1") == 0) echo "checked";?>><img src="static/img/<?php if (strcmp($name, "1") == 0) echo "gbasp24dp"; else echo "98pc24dp";?>.webp" alt="wallpaper button" width="32" height="32" id="icobg<?php echo $name;?>"><br><?php echo $name;?>
+					<input type="radio" name="bg" id="bg<?php echo $name;?>" autocomplete="off" <?php if (strcmp($name, "1") == 0) echo "checked";?>><img src="static/img/<?php if (strcmp($name, "1") == 0) echo "gbasp24dp"; else echo "98pc24dp";?>.webp" title="Click to select wallpaper <?php echo $name;?>" alt="wallpaper <?php echo $name;?> button" width="32" height="32" id="icobg<?php echo $name;?>"><br><?php echo $name;?>
 				</label>
 	<?php
 			}

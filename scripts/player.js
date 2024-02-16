@@ -37,8 +37,7 @@ function GetAnswers() {
                 artistElem.innerHTML = songData.artist;
 
                 albumElem.src = songData.artwork_src;
-                albumElem.title = "Album: " + songData.album;
-                albumElem.alt = songData.album;
+                albumElem.title = "Album: " + songData.album + " (click to play/pause)";
             })
             .catch(error => {
                 console.error(error);
@@ -48,8 +47,7 @@ function GetAnswers() {
                 artistElem.innerHTML = "";
 
                 albumElem.removeAttribute("src");
-                albumElem.title = "Album not found";
-                albumElem.alt = "Album not found";
+                albumElem.title = "Album not found (click to play/pause)";
             });
     } else
         currentPosition += 1;
