@@ -13,20 +13,20 @@ window.__onGCastApiAvailable = function (isAvailable) {
   var stateChanged = cast.framework.CastContextEventType.CAST_STATE_CHANGED;
   castContext.addEventListener(stateChanged, function (event) {
     var castSession = castContext.getCurrentSession();
-    var media = new chrome.cast.media.MediaInfo("https://radio.plaza.one/mp3", "audio/mp3");
+    var media = new chrome.cast.media.MediaInfo(streamURL, "audio/mp3");
     media.metadata = new chrome.cast.media.MusicTrackMediaMetadata();
     media.metadata.title = "Vaporwave Infuser";
     media.metadata.artist = "Developed by Francesco Camporese";
-    media.metadata.images = [{ 'url': 'https://vaporwaveinfuser.altervista.org/static/img/albumCover.webp' }];
+    media.metadata.images = [{ "url": "https://vaporwaveinfuser.altervista.org/static/img/albumCover.webp" }];
     var request = new chrome.cast.media.LoadRequest(media);
 
     castSession && castSession
       .loadMedia(request)
       .then(function () {
-        console.log("Success");
+        console.log("Media loaded successfully to Chromecast");
       })
       .catch(function (error) {
-        console.error("Error: " + error);
+        console.error("Error loading media to Chromecast: " + error);
       });
   });
 };
