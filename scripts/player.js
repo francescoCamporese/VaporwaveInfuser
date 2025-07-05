@@ -2,7 +2,7 @@ var timer;
 let currentSong = null;
 let currentPosition = 0;
 const streamURL = "https://radio.plaza.one/mp3";
-const apiURL = "https://api.plaza.one/status";
+const apiURL = "proxy.php";
 
 const interval = setInterval(GetAnswers, 1000);
 
