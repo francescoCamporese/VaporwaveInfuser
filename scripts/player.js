@@ -55,17 +55,10 @@ function GetAnswers() {
 
 function playPauseFun() {
     var aud = document.getElementById("music");
-    var albumElem = document.getElementById("album");
-
     if (aud.paused) {
         aud.play();
-        albumElem.classList.add("playing");
-        albumElem.classList.remove("paused");
-    }
-    else {
+    } else {
         aud.pause();
-        albumElem.classList.add("paused");
-        albumElem.classList.remove("playing");
     }
 }
 
@@ -139,3 +132,18 @@ function whenPaused() {
 function whenPlayed() {
     setTimerBtn.disabled = false;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    var aud = document.getElementById("music");
+    var albumElem = document.getElementById("album");
+
+    aud.addEventListener("play", function() {
+        albumElem.classList.add("playing");
+        albumElem.classList.remove("paused");
+    });
+
+    aud.addEventListener("pause", function() {
+        albumElem.classList.add("paused");
+        albumElem.classList.remove("playing");
+    });
+});
